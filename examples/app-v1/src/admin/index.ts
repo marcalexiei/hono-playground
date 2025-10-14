@@ -35,7 +35,7 @@ app.doc("/openapi.json", {
 });
 
 app.get(
-  "/scalar",
+  "/docs",
   Scalar({ url: `/${adminPathPrefix}/openapi.json`, pageTitle: "Admin API" })
 );
 

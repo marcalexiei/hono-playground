@@ -4,8 +4,8 @@ import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 import { logger } from "hono/logger";
 
-import { v1, v1PathPrefix } from "./v1/index.ts";
-import { admin } from "./admin/index.ts";
+import { v1, v1PathPrefix } from "./v1/index.js";
+// import { admin } from "./admin/index.js";
 
 const app = new Hono();
 
@@ -16,7 +16,7 @@ app.get("/", (c) => {
 });
 
 app.route(v1PathPrefix, v1);
-app.route("admin", admin);
+// app.route("admin", admin);
 
 const server = serve(
   {
